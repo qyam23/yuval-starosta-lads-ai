@@ -1,0 +1,9 @@
+{
+  "name": "Yuval Starosta Labs",
+  "description": "Senior-level industrial intelligence & engineering lab specializing in advanced extrusion systems, factory engineering, and AI-driven industrial automation.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
