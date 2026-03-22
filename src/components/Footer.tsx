@@ -1,47 +1,48 @@
 export default function Footer() {
   return (
-    <footer className="py-20 px-6 border-t border-industrial-border bg-industrial-dark">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+    <footer className="border-t border-white/8 bg-[#050a12] px-6 py-[4.5rem]">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-16 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
-            <div className="flex items-center gap-2 mb-8">
-              <div className="w-8 h-8 bg-industrial-accent rounded-sm flex items-center justify-center">
-                <span className="text-industrial-dark font-bold text-lg">Y</span>
+            <div className="mb-8 flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-industrial-accent/30 bg-white/[0.03]">
+                <span className="text-lg font-bold text-industrial-accent">Y</span>
               </div>
-              <span className="text-xl font-bold tracking-tight uppercase">
-                YUVAL STAROSTA <span className="text-industrial-accent">LABS</span>
-              </span>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white">YUVAL STAROSTA ENGINEERING</p>
+                <p className="mt-1 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-slate-500">A Division of Yuval Starosta Labs</p>
+              </div>
             </div>
-            <p className="text-slate-400 max-w-md leading-relaxed">
-              Leading the transition to intelligent manufacturing through advanced engineering and AI integration.
+            <p className="max-w-xl leading-7 text-slate-400">
+              Premium industrial engineering for advanced manufacturing environments, spanning extrusion, factory systems, automation, and operational intelligence.
             </p>
           </div>
-          
+
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-white">Capabilities</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
-              <li><a href="#" className="hover:text-industrial-accent transition-colors">Extrusion Systems</a></li>
-              <li><a href="#" className="hover:text-industrial-accent transition-colors">Process Engineering</a></li>
-              <li><a href="#" className="hover:text-industrial-accent transition-colors">Automation</a></li>
-              <li><a href="#" className="hover:text-industrial-accent transition-colors">Industrial AI</a></li>
+            <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Capabilities</h4>
+            <ul className="space-y-4 text-sm text-slate-400">
+              <li><a href="#extrusion" className="transition-colors hover:text-industrial-accent">Extrusion Engineering</a></li>
+              <li><a href="#factory" className="transition-colors hover:text-industrial-accent">Factory Building</a></li>
+              <li><a href="#automation" className="transition-colors hover:text-industrial-accent">Automation &amp; Control</a></li>
+              <li><a href="#intelligence" className="transition-colors hover:text-industrial-accent">ER Labs</a></li>
             </ul>
           </div>
-          
+
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-6 text-white">Contact</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Contact</h4>
+            <ul className="space-y-4 text-sm text-slate-400">
               <li>info@starosta-labs.com</li>
-              <li>Engineering HQ</li>
+              <li>Executive Engineering Office</li>
               <li>Tel Aviv, Israel</li>
             </ul>
           </div>
         </div>
-        
-        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-industrial-border text-xs text-slate-500 uppercase tracking-widest">
-          <p>© 2026 Yuval Starosta Labs. All rights reserved.</p>
-          <div className="flex gap-8 mt-6 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+
+        <div className="flex flex-col items-center justify-between border-t border-white/8 pt-12 text-xs uppercase tracking-widest text-slate-500 md:flex-row">
+          <p>&copy; 2026 Yuval Starosta Engineering. All rights reserved.</p>
+          <div className="mt-6 flex gap-8 md:mt-0">
+            <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
+            <a href="#" className="transition-colors hover:text-white">Terms of Service</a>
           </div>
         </div>
       </div>

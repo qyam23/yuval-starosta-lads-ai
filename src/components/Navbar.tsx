@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Menu, X, FlaskConical, LogIn, LogOut, User as UserIcon } from "lucide-react";
+import { Menu, X, LogIn, LogOut, User as UserIcon } from "lucide-react";
 import { useState } from "react";
 import { useAuth } from "../context/FirebaseContext";
 
@@ -8,107 +8,118 @@ export default function Navbar() {
   const { user, signIn, logout, loading } = useAuth();
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-industrial-dark/80 backdrop-blur-md border-b border-industrial-border">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="relative w-10 h-10 flex items-center justify-center">
-            <svg viewBox="0 0 100 100" className="w-full h-full text-industrial-accent fill-current">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/8 bg-[#07101b]/88 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6">
+        <a href="#top" className="flex min-w-0 items-center gap-3">
+          <div className="relative flex h-10 w-10 items-center justify-center rounded-full border border-industrial-accent/30 bg-white/[0.03]">
+            <svg viewBox="0 0 100 100" className="h-full w-full fill-current text-industrial-accent">
               <path d="M50 5 L90 25 L90 75 L50 95 L10 75 L10 25 Z" fill="none" stroke="currentColor" strokeWidth="4" />
               <path d="M35 35 H65 V45 H45 V55 H65 V65 H35" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-          <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-tighter leading-none">
-              YUVAL STAROSTA <span className="text-industrial-accent">LABS</span>
+          <div className="flex min-w-0 flex-col">
+            <span className="truncate text-[0.95rem] font-semibold leading-none tracking-[0.14em] text-white sm:text-base">
+              YUVAL STAROSTA ENGINEERING
             </span>
-            <span className="text-[8px] uppercase tracking-[0.2em] text-slate-500 font-bold">Engineering before algorithms</span>
+            <span className="mt-1 truncate text-[0.56rem] font-semibold uppercase tracking-[0.22em] text-slate-400 sm:text-[0.62rem]">
+              A Division of Yuval Starosta Labs
+            </span>
           </div>
-        </div>
+        </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
-          <a href="#capabilities" className="hover:text-industrial-accent transition-colors">Capabilities</a>
-          <a href="#domains" className="hover:text-industrial-accent transition-colors">Domains</a>
-          <a href="#expertise" className="hover:text-industrial-accent transition-colors">Expertise</a>
-          
-          <div className="flex items-center gap-4 ml-4 pl-4 border-l border-white/10">
+        <div className="hidden items-center gap-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-slate-300 md:flex">
+          <a href="#domains" className="transition-colors hover:text-industrial-accent">Domains</a>
+          <a href="#intelligence" className="transition-colors hover:text-industrial-accent">ER Labs</a>
+          <a href="#expertise" className="transition-colors hover:text-industrial-accent">Expertise</a>
+
+          <div className="ml-2 flex items-center gap-4 border-l border-white/10 pl-5">
             {!loading && (
               user ? (
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     {user.photoURL ? (
-                      <img src={user.photoURL} alt="" className="w-6 h-6 rounded-full border border-industrial-accent/50" />
+                      <img src={user.photoURL} alt="" className="h-6 w-6 rounded-full border border-industrial-accent/50" />
                     ) : (
                       <UserIcon size={16} className="text-industrial-accent" />
                     )}
-                    <span className="text-[10px] text-slate-400 max-w-[80px] truncate">{user.displayName || user.email}</span>
+                    <span className="max-w-[80px] truncate text-[10px] text-slate-400">{user.displayName || user.email}</span>
                   </div>
-                  <button 
+                  <button
                     onClick={logout}
-                    className="text-white/60 hover:text-industrial-accent transition-colors"
+                    className="text-white/60 transition-colors hover:text-industrial-accent"
                     title="Sign Out"
                   >
                     <LogOut size={18} />
                   </button>
                 </div>
               ) : (
-                <button 
+                <button
                   onClick={signIn}
-                  className="flex items-center gap-2 text-white/80 hover:text-industrial-accent transition-colors"
+                  className="flex items-center gap-2 text-white/70 transition-colors hover:text-industrial-accent"
                 >
                   <LogIn size={18} />
                   <span>Sign In</span>
                 </button>
               )
             )}
-            <button className="px-5 py-2 border border-industrial-accent text-industrial-accent hover:bg-industrial-accent hover:text-industrial-dark transition-all duration-300 rounded-sm">
+            <a
+              href="#contact"
+              className="rounded-sm border border-industrial-accent/70 px-5 py-2 text-industrial-accent transition-all duration-300 hover:bg-industrial-accent hover:text-industrial-dark"
+            >
               Discuss Project
-            </button>
+            </a>
           </div>
         </div>
 
-        {/* Mobile Toggle */}
-        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="rounded-sm border border-white/10 bg-white/[0.03] p-2 text-white md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
+        >
           {isOpen ? <X /> : <Menu />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-industrial-dark border-b border-industrial-border px-6 py-8 flex flex-col gap-6 uppercase text-sm tracking-widest"
+          className="border-b border-white/8 bg-[#07101b]/98 px-6 py-6 md:hidden"
         >
-          <a href="#capabilities" onClick={() => setIsOpen(false)}>Capabilities</a>
-          <a href="#domains" onClick={() => setIsOpen(false)}>Domains</a>
-          <a href="#expertise" onClick={() => setIsOpen(false)}>Expertise</a>
-          
-          <div className="pt-6 border-t border-white/10 flex flex-col gap-6">
+          <div className="flex flex-col gap-5 text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">
+            <a href="#domains" onClick={() => setIsOpen(false)}>Domains</a>
+            <a href="#intelligence" onClick={() => setIsOpen(false)}>ER Labs</a>
+            <a href="#expertise" onClick={() => setIsOpen(false)}>Expertise</a>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-6 border-t border-white/10 pt-6">
             {!loading && (
               user ? (
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    {user.photoURL && <img src={user.photoURL} alt="" className="w-8 h-8 rounded-full" />}
+                    {user.photoURL && <img src={user.photoURL} alt="" className="h-8 w-8 rounded-full" />}
                     <span className="text-slate-400">{user.displayName || user.email}</span>
                   </div>
-                  <button onClick={logout} className="text-industrial-accent flex items-center gap-2">
+                  <button onClick={logout} className="flex items-center gap-2 text-industrial-accent">
                     <LogOut size={18} /> Sign Out
                   </button>
                 </div>
               ) : (
-                <button onClick={signIn} className="text-industrial-accent flex items-center gap-2">
+                <button onClick={signIn} className="flex items-center gap-2 text-industrial-accent">
                   <LogIn size={18} /> Sign In
                 </button>
               )
             )}
-            <button className="w-full py-3 border border-industrial-accent text-industrial-accent">
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="w-full border border-industrial-accent/70 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-industrial-accent"
+            >
               Discuss Project
-            </button>
+            </a>
           </div>
         </motion.div>
       )}
     </nav>
   );
 }
-

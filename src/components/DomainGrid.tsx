@@ -1,70 +1,97 @@
 import { motion } from "motion/react";
-import { Factory, Cpu, Settings, Database } from "lucide-react";
+import { Factory, Cpu, Settings, Database, ArrowUpRight } from "lucide-react";
 
 const domains = [
   {
-    title: "Extrusion & Compounding Systems",
-    icon: <Settings className="text-industrial-accent" size={32} />,
-    image: "https://picsum.photos/seed/industrial-machinery/800/600"
+    id: "intelligence",
+    title: "ER Labs",
+    descriptor: "Real-time industrial intelligence",
+    icon: <Database className="text-industrial-accent" size={28} />,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    alt: "Industrial control room dashboards with operational KPI screens",
   },
   {
-    title: "Factory & Process Engineering",
-    icon: <Factory className="text-industrial-accent" size={32} />,
-    image: "https://picsum.photos/seed/modern-architecture/800/600"
+    id: "extrusion",
+    title: "Extrusion Engineering",
+    descriptor: "Twin-screw compounding and process optimization",
+    icon: <Settings className="text-industrial-accent" size={28} />,
+    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=1200&q=80",
+    alt: "Industrial extrusion and compounding machinery in production",
   },
   {
-    title: "Automation & Control Systems",
-    icon: <Cpu className="text-industrial-accent" size={32} />,
-    image: "https://picsum.photos/seed/engineering-gear/800/600"
+    id: "factory",
+    title: "Factory Building",
+    descriptor: "Layout, flow, and production infrastructure",
+    icon: <Factory className="text-industrial-accent" size={28} />,
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+    alt: "Factory platforms, structural systems, and industrial plant layout environment",
   },
   {
-    title: "Industrial Intelligence (ER Labs)",
-    icon: <Database className="text-industrial-accent" size={32} />,
-    image: "https://picsum.photos/seed/industrial-network/800/600"
-  }
+    id: "automation",
+    title: "Automation & Control",
+    descriptor: "PLC, integration, and process logic",
+    icon: <Cpu className="text-industrial-accent" size={28} />,
+    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+    alt: "Technician working with industrial automation and control equipment",
+  },
 ];
 
 export default function DomainGrid() {
   return (
-    <section id="domains" className="py-32 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="mb-20">
-          <h2 className="text-4xl font-bold mb-4 tracking-tight">Operating Domains</h2>
-          <div className="w-20 h-1 bg-industrial-accent" />
+    <section id="domains" className="px-6 pb-20 pt-6 sm:px-8 sm:pb-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 max-w-3xl sm:mb-14">
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-industrial-accent">Core Domains</p>
+          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl lg:text-[2.8rem]">
+            Four integrated disciplines built for advanced production systems.
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+            Use the homepage like an engineering map. Each domain anchors a detailed section below with the underlying delivery scope.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div className="grid grid-cols-2 gap-4 md:gap-6 xl:grid-cols-4">
           {domains.map((domain, idx) => (
-            <motion.div
-              key={idx}
+            <motion.a
+              key={domain.id}
+              href={`#${domain.id}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="glass-card group relative overflow-hidden p-8 flex flex-col justify-between h-[400px]"
+              whileHover={{ y: -6 }}
+              className="group relative flex aspect-[0.96] min-h-[15.5rem] flex-col justify-end overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#0d1725]/70 p-4 shadow-[0_24px_48px_rgba(0,0,0,0.32)] transition-all duration-300 hover:border-industrial-accent/55 hover:shadow-[0_28px_60px_rgba(0,0,0,0.4)] sm:min-h-[17rem] sm:p-5"
             >
-              <div className="relative z-10">
-                <div className="mb-6">{domain.icon}</div>
-                <h3 className="text-xl font-bold leading-tight group-hover:text-industrial-accent transition-colors">
-                  {domain.title}
-                </h3>
+              <img
+                src={domain.image}
+                alt={domain.alt}
+                className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.04]"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,12,18,0.02)_0%,rgba(8,12,18,0.12)_22%,rgba(8,12,18,0.36)_54%,rgba(8,12,18,0.68)_78%,rgba(8,12,18,0.8)_100%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(212,175,55,0.08),rgba(212,175,55,0.0)_30%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(82,146,214,0.18),transparent_34%)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              <div className="absolute inset-x-0 bottom-0 h-[52%] bg-[linear-gradient(180deg,rgba(8,12,18,0)_0%,rgba(8,12,18,0.2)_18%,rgba(8,12,18,0.72)_100%)]" />
+
+              <div className="relative z-10 flex h-full flex-col justify-between">
+                <div className="flex justify-between">
+                  <div className="rounded-full border border-white/10 bg-[#09111d]/78 p-2.5 shadow-[0_0_24px_rgba(25,63,104,0.16)]">
+                    {domain.icon}
+                  </div>
+                  <ArrowUpRight size={18} className="text-white/60 transition-colors group-hover:text-industrial-accent" />
+                </div>
+                <div className="pt-12 text-left">
+                  <p className="text-[0.62rem] font-semibold uppercase tracking-[0.26em] text-industrial-accent/95">Domain</p>
+                  <h3 className="mt-3 max-w-[12rem] text-lg font-semibold leading-tight text-white sm:text-xl">
+                    {domain.title}
+                  </h3>
+                  <p className="mt-3 max-w-[15rem] text-xs leading-5 text-slate-100 sm:text-sm sm:leading-6">
+                    {domain.descriptor}
+                  </p>
+                </div>
               </div>
-              
-              <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-                <img 
-                  src={domain.image} 
-                  alt={domain.title}
-                  className="w-full h-full object-cover grayscale"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              
-              <div className="relative z-10 mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <button className="text-xs uppercase tracking-[0.2em] font-bold flex items-center gap-2">
-                  Learn More <div className="w-8 h-[1px] bg-industrial-accent" />
-                </button>
-              </div>
-            </motion.div>
+              <div className="pointer-events-none absolute inset-x-5 bottom-5 h-px bg-gradient-to-r from-industrial-accent/0 via-industrial-accent/70 to-industrial-accent/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            </motion.a>
           ))}
         </div>
       </div>

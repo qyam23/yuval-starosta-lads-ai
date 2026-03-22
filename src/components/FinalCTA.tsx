@@ -2,27 +2,29 @@ import { motion } from "motion/react";
 
 export default function FinalCTA() {
   return (
-    <section className="py-40 px-6 relative overflow-hidden">
-      <div className="absolute inset-0 bg-industrial-accent/5 z-0" />
-      
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+    <section id="contact" className="relative overflow-hidden px-6 py-28 sm:px-8 sm:py-32">
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.1),transparent_36%),linear-gradient(180deg,rgba(10,17,29,0.85),rgba(5,9,16,1))]" />
+
+      <div className="relative z-10 mx-auto max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
-            Let’s build your next <br />
-            <span className="text-industrial-accent">intelligent factory</span>
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-industrial-accent">Project Discussion</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl md:text-6xl">
+            Build the next production system with engineering that is designed to perform.
           </h2>
-          <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            One partner. Multiple capabilities. Real results. <br />
-            Join the leaders in advanced manufacturing.
+          <p className="mx-auto mb-12 mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+            From extrusion lines to factory infrastructure, automation architecture, and industrial intelligence, the work stays grounded in real manufacturing constraints.
           </p>
-          <button className="px-12 py-5 bg-industrial-accent text-industrial-dark font-bold uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 rounded-sm shadow-[0_0_30px_rgba(0,229,255,0.3)]">
+          <a
+            href="mailto:info@starosta-labs.com"
+            className="inline-flex rounded-sm bg-industrial-accent px-10 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-industrial-dark transition-all duration-300 hover:bg-white"
+          >
             Discuss Your Project
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

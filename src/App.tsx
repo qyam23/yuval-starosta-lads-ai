@@ -21,19 +21,19 @@ export default function App() {
     <ErrorBoundary>
       <FirebaseProvider>
         <AnimatePresence>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen selection:bg-industrial-accent selection:text-industrial-dark"
+            className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(46,88,133,0.18),transparent_32%),linear-gradient(180deg,#0b1321_0%,#09101b_38%,#060b13_100%)] selection:bg-industrial-accent selection:text-industrial-dark"
           >
             <Navbar />
             <main>
               <Hero />
-              <ValueStrip />
               <DomainGrid />
               <ExpandableSections />
               <IndustrialAI />
               <Differentiation />
+              <ValueStrip />
               <FinalCTA />
             </main>
             <Footer />
@@ -43,6 +43,3 @@ export default function App() {
     </ErrorBoundary>
   );
 }
-
-
-
