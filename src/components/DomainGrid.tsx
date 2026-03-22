@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
 import { motion } from "motion/react";
 import { Factory, Cpu, Settings, Database, ArrowUpRight } from "lucide-react";
+import factoryBuildingMasterplan from "../assets/factory-building-masterplan.png";
 
 type DomainId = "intelligence" | "extrusion" | "factory" | "automation";
 
@@ -36,7 +37,7 @@ const domains: {
     title: "Factory Building",
     descriptor: "Layout, flow, and production infrastructure",
     icon: <Factory className="text-industrial-accent" size={28} />,
-    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=80",
+    image: factoryBuildingMasterplan,
     alt: "Factory masterplan and plant layout environment",
     position: "center",
   },
