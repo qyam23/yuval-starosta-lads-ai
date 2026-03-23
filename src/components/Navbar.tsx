@@ -12,15 +12,12 @@ export default function Navbar() {
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/8 bg-[#07101b]/88 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6">
         <a href="#top" className="flex min-w-0 items-center gap-3">
-          <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white/[0.02]">
-            <LogoMark className="h-12 w-12" />
+          <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white/[0.02]">
+            <LogoMark className="h-14 w-14" />
           </div>
-          <div className="flex min-w-0 flex-col">
+          <div className="flex min-w-0 items-center">
             <span className="truncate text-[0.95rem] font-semibold leading-none tracking-[0.14em] text-white sm:text-base">
               YUVAL STAROSTA ENGINEERING
-            </span>
-            <span className="mt-1 truncate text-[0.56rem] font-semibold uppercase tracking-[0.22em] text-slate-400 sm:text-[0.62rem]">
-              A Division of Yuval Starosta Labs
             </span>
           </div>
         </a>

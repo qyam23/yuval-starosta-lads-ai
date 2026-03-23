@@ -39,7 +39,7 @@ export default function Hero() {
               Engineering Industrial Systems That Perform
             </h1>
 
-            <p className="mt-6 max-w-2xl text-[0.98rem] leading-7 text-slate-300 sm:mt-7 sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-[34rem] text-[0.98rem] leading-7 text-slate-300 sm:mt-7 sm:max-w-[32rem] sm:text-lg sm:leading-8 lg:max-w-[30rem]">
               Extrusion engineering, factory systems, automation, and industrial intelligence built around real production environments.
             </p>
 
