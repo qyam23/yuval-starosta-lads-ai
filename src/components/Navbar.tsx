@@ -61,7 +61,7 @@ export default function Navbar() {
               href="#contact"
               className="rounded-sm border border-industrial-accent/70 px-5 py-2 text-industrial-accent transition-all duration-300 hover:bg-industrial-accent hover:text-industrial-dark"
             >
-              Discuss Project
+              Start a Project
             </a>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="w-full border border-industrial-accent/70 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-industrial-accent"
             >
-              Discuss Project
+              Start a Project
             </a>
           </div>
         </motion.div>

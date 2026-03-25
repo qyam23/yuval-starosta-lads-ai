@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
+import automationControlCard from "../assets/automation-control-card.png";
 
 const points = [
   "Built around real factory execution, not generic advisory slides",
@@ -42,10 +43,9 @@ export default function Differentiation() {
           <div className="relative">
             <div className="aspect-[0.92] overflow-hidden rounded-[2rem] border border-white/10 bg-[#0a131f] p-4 shadow-[0_28px_60px_rgba(0,0,0,0.22)]">
               <img
-                src="https://images.unsplash.com/photo-1581092919535-7146ff1a5903?auto=format&fit=crop&w=1400&q=80"
+                src={automationControlCard}
                 alt="Industrial engineering environment"
                 className="h-full w-full rounded-[1.5rem] object-cover opacity-80"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -right-6 -top-6 h-32 w-32 border border-industrial-accent/20" />

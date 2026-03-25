@@ -43,6 +43,582 @@
     animation: logo-gear-spin 12s linear infinite;
   }
 
+  .industrial-intelligence-visual {
+    animation: industrial-visual-float 7.5s ease-in-out infinite;
+    transform-origin: center;
+    will-change: transform, opacity;
+    filter: drop-shadow(0 0 24px rgba(62, 180, 255, 0.12));
+  }
+
+  .industrial-intelligence-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .industrial-intelligence-overlay__metrics {
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 8%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .industrial-intelligence-overlay__metrics span {
+    height: 2.8rem;
+    border: 1px solid rgba(104, 201, 255, 0.14);
+    border-radius: 0.85rem;
+    background:
+      linear-gradient(180deg, rgba(9, 19, 32, 0.78), rgba(7, 13, 24, 0.34)),
+      radial-gradient(circle at 18% 50%, rgba(66, 202, 255, 0.22), transparent 28%);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+    animation: industrial-metric-pulse 3.6s ease-in-out infinite;
+  }
+
+  .industrial-intelligence-overlay__metrics span:nth-child(2) {
+    animation-delay: 0.9s;
+  }
+
+  .industrial-intelligence-overlay__metrics span:nth-child(3) {
+    animation-delay: 1.8s;
+  }
+
+  .industrial-intelligence-overlay__chart {
+    position: absolute;
+    left: 8%;
+    right: 8%;
+    top: 26%;
+    height: 35%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(8, 14, 24, 0.2), rgba(8, 14, 24, 0.05));
+  }
+
+  .industrial-intelligence-overlay__chart i {
+    position: absolute;
+    left: -8%;
+    right: -8%;
+    height: 2px;
+    border-radius: 999px;
+    filter: drop-shadow(0 0 8px currentColor);
+  }
+
+  .industrial-intelligence-overlay__chart i:nth-child(1) {
+    top: 34%;
+    color: rgba(80, 214, 255, 0.8);
+    background: linear-gradient(90deg, transparent 0%, currentColor 14%, rgba(255,255,255,0.85) 48%, currentColor 82%, transparent 100%);
+    clip-path: polygon(0 74%, 7% 70%, 15% 76%, 24% 64%, 33% 68%, 42% 45%, 52% 56%, 60% 38%, 69% 44%, 78% 22%, 87% 35%, 100% 14%, 100% 100%, 0 100%);
+    animation: industrial-chart-wave-a 4.2s ease-in-out infinite;
+  }
+
+  .industrial-intelligence-overlay__chart i:nth-child(2) {
+    top: 52%;
+    color: rgba(160, 119, 255, 0.68);
+    background: linear-gradient(90deg, transparent 0%, currentColor 16%, rgba(255,255,255,0.72) 50%, currentColor 84%, transparent 100%);
+    clip-path: polygon(0 58%, 10% 54%, 18% 61%, 29% 49%, 40% 56%, 49% 33%, 59% 38%, 67% 26%, 76% 34%, 86% 18%, 100% 28%, 100% 100%, 0 100%);
+    animation: industrial-chart-wave-b 5.3s ease-in-out infinite;
+  }
+
+  .industrial-intelligence-overlay__chart i:nth-child(3) {
+    top: 73%;
+    color: rgba(255, 198, 87, 0.62);
+    background: linear-gradient(90deg, transparent 0%, currentColor 18%, rgba(255,255,255,0.65) 50%, currentColor 82%, transparent 100%);
+    clip-path: polygon(0 72%, 12% 68%, 21% 75%, 33% 59%, 44% 66%, 55% 47%, 64% 55%, 75% 41%, 88% 50%, 100% 34%, 100% 100%, 0 100%);
+    animation: industrial-chart-wave-c 4.8s ease-in-out infinite;
+  }
+
+  .industrial-intelligence-overlay__bars {
+    position: absolute;
+    left: 12%;
+    right: 12%;
+    bottom: 11%;
+    height: 18%;
+    display: flex;
+    align-items: end;
+    gap: 0.45rem;
+  }
+
+  .industrial-intelligence-overlay__bars span {
+    flex: 1;
+    border-radius: 0.55rem 0.55rem 0.2rem 0.2rem;
+    background: linear-gradient(180deg, rgba(84, 215, 255, 0.9), rgba(49, 126, 255, 0.22));
+    box-shadow: 0 0 12px rgba(58, 186, 255, 0.18);
+    animation: industrial-bar-bounce 2.6s ease-in-out infinite;
+  }
+
+  .industrial-intelligence-overlay__bars span:nth-child(1) { height: 34%; animation-delay: 0.1s; }
+  .industrial-intelligence-overlay__bars span:nth-child(2) { height: 72%; animation-delay: 0.35s; }
+  .industrial-intelligence-overlay__bars span:nth-child(3) { height: 48%; animation-delay: 0.6s; }
+  .industrial-intelligence-overlay__bars span:nth-child(4) { height: 86%; animation-delay: 0.85s; }
+  .industrial-intelligence-overlay__bars span:nth-child(5) { height: 58%; animation-delay: 1.1s; }
+  .industrial-intelligence-overlay__bars span:nth-child(6) { height: 79%; animation-delay: 1.35s; }
+
+  .industrial-intelligence-overlay__scan {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(79, 218, 255, 0.04) 45%, rgba(79, 218, 255, 0.12) 50%, rgba(79, 218, 255, 0.04) 55%, transparent 100%);
+    mix-blend-mode: screen;
+    animation: industrial-scanline 4.8s linear infinite;
+  }
+
+  .industrial-intelligence-overlay__pulse {
+    position: absolute;
+    right: 14%;
+    top: 24%;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(89, 228, 255, 0.95);
+    box-shadow: 0 0 0 rgba(89, 228, 255, 0.35);
+    animation: industrial-pulse-dot 2.4s ease-out infinite;
+  }
+
+  .automation-system-visual {
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.2);
+  }
+
+  .automation-system-visual__image {
+    filter: brightness(0.96) saturate(0.98);
+  }
+
+  .automation-system-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .automation-system-overlay__svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .automation-system-overlay__flow {
+    fill: none;
+    stroke: rgba(141, 232, 255, 0.34);
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 10px rgba(115, 231, 255, 0.22));
+  }
+
+  .automation-system-overlay__flow--a,
+  .automation-system-overlay__flow--b,
+  .automation-system-overlay__flow--c,
+  .automation-system-overlay__flow--d {
+    stroke-dasharray: 12 88;
+    animation: automation-flow-shimmer 8s linear infinite;
+  }
+
+  .automation-system-overlay__flow--b {
+    animation-delay: -2.1s;
+  }
+
+  .automation-system-overlay__flow--c {
+    animation-delay: -4.2s;
+  }
+
+  .automation-system-overlay__flow--d {
+    animation-delay: -1.2s;
+  }
+
+  .automation-system-overlay__particle,
+  .automation-system-overlay__pulse,
+  .automation-system-overlay__ambient {
+    position: absolute;
+    border-radius: 999px;
+  }
+
+  .automation-system-overlay__particle {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, rgba(194, 247, 255, 0.95), rgba(123, 226, 255, 0.32) 60%, transparent 76%);
+    filter: blur(0.2px);
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(118, 229, 255, 0.34);
+  }
+
+  .automation-system-overlay__particle--1 {
+    offset-path: path("M 12 56 C 16 56, 18 58, 22 58 L 40 58 C 44 58, 46 60, 46 64 L 46 74 C 46 78, 48 80, 52 80 L 84 80");
+    animation: automation-particle-travel 7.2s linear infinite;
+  }
+
+  .automation-system-overlay__particle--2 {
+    offset-path: path("M 16 40 C 21 40, 24 40, 26 40 L 26 26 C 26 22, 28 20, 32 20 L 76 20 C 82 20, 86 22, 86 28 L 86 44");
+    animation: automation-particle-travel 8.1s linear infinite -3.4s;
+  }
+
+  .automation-system-overlay__particle--3 {
+    offset-path: path("M 49 55 C 54 55, 58 54, 62 54 L 66 54 C 70 54, 72 52, 72 48 L 72 44 C 72 40, 74 38, 78 38 L 84 38");
+    animation: automation-particle-travel 6.6s linear infinite -2.2s;
+  }
+
+  .automation-system-overlay__particle--4 {
+    offset-path: path("M 52 56 C 55 56, 58 56, 61 56");
+    animation: automation-particle-travel 5.2s linear infinite -1.4s;
+  }
+
+  .automation-system-overlay__particle--5 {
+    offset-path: path("M 16 40 C 21 40, 24 40, 26 40 L 26 26 C 26 22, 28 20, 32 20 L 76 20 C 82 20, 86 22, 86 28 L 86 44");
+    animation: automation-particle-travel 7.4s linear infinite -5.3s;
+  }
+
+  .automation-system-overlay__particle--6 {
+    offset-path: path("M 10 58 C 14 58, 16 60, 20 60 L 38 60 C 42 60, 44 62, 44 66 L 44 76 C 44 80, 46 82, 50 82 L 84 82");
+    animation: automation-particle-travel 6.9s linear infinite -4.6s;
+  }
+
+  .automation-system-overlay__pulse {
+    inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(161, 238, 255, 0.06) 46%, rgba(161, 238, 255, 0.22) 50%, rgba(161, 238, 255, 0.06) 54%, transparent 100%);
+    mix-blend-mode: screen;
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  .automation-system-overlay__pulse--a {
+    animation: automation-pulse-pass 6.8s ease-in-out infinite;
+  }
+
+  .automation-system-overlay__pulse--b {
+    animation: automation-pulse-pass 7.6s ease-in-out infinite -3.1s;
+  }
+
+  .automation-system-overlay__screen {
+    position: absolute;
+    left: 76.5%;
+    top: 30.5%;
+    width: 18.8%;
+    height: 28%;
+  }
+
+  .automation-system-overlay__screen-indicator {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(162, 242, 255, 0.9);
+    box-shadow: 0 0 8px rgba(162, 242, 255, 0.24);
+    animation: automation-indicator-blink 3.4s ease-in-out infinite;
+  }
+
+  .automation-system-overlay__screen-indicator--1 {
+    left: 17%;
+    top: 22%;
+  }
+
+  .automation-system-overlay__screen-indicator--2 {
+    left: 70%;
+    top: 34%;
+    animation-delay: -1.1s;
+  }
+
+  .automation-system-overlay__screen-indicator--3 {
+    left: 61%;
+    top: 73%;
+    animation-delay: -2.2s;
+  }
+
+  .automation-system-overlay__screen-indicator--4 {
+    left: 28%;
+    top: 58%;
+    animation-delay: -0.6s;
+  }
+
+  .automation-system-overlay__screen-wave {
+    position: absolute;
+    left: 11%;
+    right: 11%;
+    height: 2px;
+    border-radius: 999px;
+    color: rgba(150, 238, 255, 0.85);
+    background: linear-gradient(90deg, transparent 0%, currentColor 20%, rgba(255,255,255,0.85) 52%, currentColor 82%, transparent 100%);
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+
+  .automation-system-overlay__screen-wave--1 {
+    top: 23%;
+    clip-path: polygon(0 78%, 9% 70%, 19% 76%, 28% 50%, 39% 66%, 51% 42%, 64% 56%, 74% 28%, 86% 44%, 100% 18%, 100% 100%, 0 100%);
+    animation: automation-screen-wave-a 5.6s ease-in-out infinite;
+  }
+
+  .automation-system-overlay__screen-wave--2 {
+    top: 68%;
+    color: rgba(124, 225, 255, 0.68);
+    clip-path: polygon(0 62%, 10% 56%, 20% 70%, 31% 46%, 43% 58%, 56% 34%, 67% 46%, 78% 25%, 88% 40%, 100% 28%, 100% 100%, 0 100%);
+    animation: automation-screen-wave-b 6.1s ease-in-out infinite;
+  }
+
+  .automation-system-overlay__plc {
+    position: absolute;
+    left: 46.3%;
+    top: 39%;
+    width: 8.2%;
+    height: 25%;
+  }
+
+  .automation-system-overlay__plc-light {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: rgba(152, 241, 255, 0.84);
+    box-shadow: 0 0 10px rgba(152, 241, 255, 0.22);
+    animation: automation-plc-breathe 3.2s ease-in-out infinite;
+  }
+
+  .automation-system-overlay__plc-light--1 { left: 22%; top: 18%; }
+  .automation-system-overlay__plc-light--2 { left: 58%; top: 32%; animation-delay: -0.9s; }
+  .automation-system-overlay__plc-light--3 { left: 34%; top: 56%; animation-delay: -1.8s; }
+  .automation-system-overlay__plc-light--4 { left: 62%; top: 72%; animation-delay: -2.5s; }
+
+  .automation-system-overlay__ambient {
+    width: 4px;
+    height: 4px;
+    background: rgba(167, 241, 255, 0.62);
+    box-shadow: 0 0 6px rgba(167, 241, 255, 0.16);
+    opacity: 0;
+    animation: automation-ambient-float 8.8s ease-in-out infinite;
+  }
+
+  .automation-system-overlay__ambient--1 { left: 22%; top: 18%; }
+  .automation-system-overlay__ambient--2 { left: 59%; top: 14%; animation-delay: -2.7s; }
+  .automation-system-overlay__ambient--3 { left: 67%; top: 64%; animation-delay: -5.1s; }
+
+  .automation-system-overlay__sheen {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(112deg, transparent 14%, rgba(162, 239, 255, 0.08) 38%, transparent 58%);
+    mix-blend-mode: screen;
+    opacity: 0.22;
+    animation: automation-sheen-drift 9.4s ease-in-out infinite;
+  }
+
+  .factory-development-visual {
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.2);
+    background:
+      radial-gradient(circle at 22% 26%, rgba(86, 133, 174, 0.12), transparent 22%),
+      linear-gradient(180deg, rgba(8, 15, 26, 0.96), rgba(9, 17, 29, 0.94));
+    aspect-ratio: 1.06 / 1;
+  }
+
+  .factory-development-visual__draft-stage,
+  .factory-development-visual__frame-stage,
+  .factory-development-visual__final-stage {
+    position: absolute;
+    inset: 0;
+  }
+
+  .factory-development-visual__draft-stage {
+    opacity: 0;
+    animation: factory-draft-stage 11s ease-in-out infinite;
+  }
+
+  .factory-development-visual__frame-stage {
+    opacity: 0;
+    animation: factory-frame-stage 11s ease-in-out infinite;
+  }
+
+  .factory-development-visual__final-stage {
+    opacity: 0;
+    animation: factory-final-stage 11s ease-in-out infinite;
+  }
+
+  .factory-development-visual__image {
+    animation: factory-image-drift 11s ease-in-out infinite;
+    transform-origin: center;
+    filter: saturate(0.94) brightness(0.84);
+  }
+
+  .factory-development-visual__final-sheen {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 56% 44%, rgba(214, 225, 234, 0.12), transparent 24%),
+      linear-gradient(115deg, transparent 26%, rgba(164, 193, 215, 0.14) 46%, transparent 64%);
+    mix-blend-mode: screen;
+    opacity: 0;
+    animation: factory-final-glow 11s ease-in-out infinite;
+  }
+
+  .factory-development-cad,
+  .factory-development-frame {
+    position: absolute;
+    inset: 0;
+  }
+
+  .factory-development-cad {
+    filter: drop-shadow(0 0 16px rgba(72, 168, 255, 0.16));
+  }
+
+  .factory-development-cad__outline,
+  .factory-development-cad__site,
+  .factory-development-cad__road,
+  .factory-development-cad__gridline,
+  .factory-development-cad__zone,
+  .factory-development-cad__service {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .factory-development-cad__outline {
+    stroke: rgba(79, 198, 255, 0.9);
+    stroke-width: 2.3;
+    stroke-dasharray: 980;
+    stroke-dashoffset: 980;
+    animation: factory-cad-draw 11s ease-in-out infinite;
+  }
+
+  .factory-development-cad__site {
+    stroke: rgba(58, 146, 255, 0.85);
+    stroke-width: 2;
+    stroke-dasharray: 1220;
+    stroke-dashoffset: 1220;
+    animation: factory-cad-draw 11s ease-in-out infinite 0.2s;
+  }
+
+  .factory-development-cad__road {
+    stroke: rgba(226, 220, 62, 0.86);
+    stroke-width: 1.5;
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+    animation: factory-cad-draw 11s ease-in-out infinite 0.35s;
+  }
+
+  .factory-development-cad__gridline {
+    stroke: rgba(111, 236, 255, 0.72);
+    stroke-width: 1.2;
+    stroke-dasharray: 280;
+    stroke-dashoffset: 280;
+    animation: factory-cad-draw 11s ease-in-out infinite;
+  }
+
+  .factory-development-cad__gridline--a { animation-delay: 0.5s; }
+  .factory-development-cad__gridline--b { animation-delay: 0.62s; }
+  .factory-development-cad__gridline--c { animation-delay: 0.74s; }
+  .factory-development-cad__gridline--d { animation-delay: 0.86s; }
+  .factory-development-cad__gridline--e { animation-delay: 0.98s; }
+  .factory-development-cad__gridline--f { animation-delay: 1.1s; }
+
+  .factory-development-cad__zone {
+    stroke: rgba(255, 66, 77, 0.76);
+    stroke-width: 1.7;
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    animation: factory-cad-draw 11s ease-in-out infinite 1.12s;
+  }
+
+  .factory-development-cad__zone--accent {
+    stroke: rgba(233, 230, 65, 0.82);
+    animation-delay: 1.32s;
+  }
+
+  .factory-development-cad__service {
+    stroke: rgba(255, 123, 152, 0.82);
+    stroke-width: 1.4;
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120;
+    animation: factory-cad-draw 11s ease-in-out infinite 1.48s;
+  }
+
+  .factory-development-cad__marker {
+    fill: none;
+    stroke: rgba(214, 234, 242, 0.84);
+    stroke-width: 1.4;
+    opacity: 0;
+    animation: factory-cad-marker 11s ease-in-out infinite;
+  }
+
+  .factory-development-frame {
+    filter: drop-shadow(0 0 18px rgba(212, 229, 240, 0.12));
+  }
+
+  .factory-development-frame__beam,
+  .factory-development-frame__column,
+  .factory-development-frame__brace,
+  .factory-development-frame__trace {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .factory-development-frame__beam {
+    stroke: rgba(232, 237, 241, 0.78);
+    stroke-width: 3.2;
+    stroke-dasharray: 920;
+    stroke-dashoffset: 920;
+    animation: factory-frame-draw 11s ease-in-out infinite 2.2s;
+  }
+
+  .factory-development-frame__beam--floor {
+    stroke: rgba(196, 208, 216, 0.64);
+    stroke-width: 2.8;
+    animation-delay: 2.55s;
+  }
+
+  .factory-development-frame__column {
+    stroke: rgba(236, 240, 242, 0.72);
+    stroke-width: 3;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240;
+    animation: factory-frame-draw 11s ease-in-out infinite;
+  }
+
+  .factory-development-frame__column--1 { animation-delay: 2.8s; }
+  .factory-development-frame__column--2 { animation-delay: 2.98s; }
+  .factory-development-frame__column--3 { animation-delay: 3.16s; }
+  .factory-development-frame__column--4 { animation-delay: 3.34s; }
+
+  .factory-development-frame__brace {
+    stroke: rgba(188, 202, 213, 0.62);
+    stroke-width: 2.2;
+    stroke-dasharray: 180;
+    stroke-dashoffset: 180;
+    animation: factory-frame-draw 11s ease-in-out infinite;
+  }
+
+  .factory-development-frame__brace--1 { animation-delay: 3.5s; }
+  .factory-development-frame__brace--2 { animation-delay: 3.7s; }
+  .factory-development-frame__brace--3 { animation-delay: 3.9s; }
+  .factory-development-frame__brace--4 { animation-delay: 4.1s; }
+
+  .factory-development-frame__trace {
+    stroke: rgba(122, 200, 255, 0.54);
+    stroke-width: 1.6;
+    stroke-dasharray: 140;
+    stroke-dashoffset: 140;
+    animation: factory-frame-draw 11s ease-in-out infinite;
+  }
+
+  .factory-development-frame__trace--1 { animation-delay: 4.18s; }
+  .factory-development-frame__trace--2 { animation-delay: 4.34s; }
+
+  .factory-development-frame__node {
+    fill: rgba(220, 230, 236, 0.86);
+    opacity: 0;
+    animation: factory-frame-node 11s ease-in-out infinite;
+  }
+
+  .factory-development-frame__node--1 { animation-delay: 4.4s; }
+  .factory-development-frame__node--2 { animation-delay: 4.56s; }
+  .factory-development-frame__node--3 { animation-delay: 4.72s; }
+  .factory-development-frame__node--4 { animation-delay: 4.88s; }
+
+  .factory-development-visual__draft-stage::after,
+  .factory-development-visual__frame-stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 52%, rgba(255, 255, 255, 0.06), transparent 54%);
+    opacity: 0.55;
+  }
+
   .extrusion-visual__ambient {
     position: absolute;
     inset: -12%;
@@ -161,17 +737,6 @@
     animation: extrusion-flow-travel 6.8s linear infinite;
   }
 
-  .extrusion-flow--feed,
-  .extrusion-flow--convey {
-    stroke: url(#extrusion-path-glow);
-  }
-
-  .extrusion-flow--merge,
-  .extrusion-flow--barrel,
-  .extrusion-flow--output {
-    stroke: url(#extrusion-output-glow);
-  }
-
   .extrusion-flow--delay {
     animation-delay: -1.1s;
   }
@@ -224,6 +789,426 @@
 
   to {
     transform: translate(54px, 70px) rotate(-360deg);
+  }
+}
+
+@keyframes industrial-visual-float {
+  0%,
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.035) translateY(-0.8%);
+    opacity: 1;
+  }
+}
+
+@keyframes industrial-metric-pulse {
+  0%,
+  100% {
+    opacity: 0.62;
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1.015);
+  }
+}
+
+@keyframes industrial-chart-wave-a {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) scaleX(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateX(1.6%) translateY(-5px) scaleX(1.02);
+    opacity: 1;
+  }
+}
+
+@keyframes industrial-chart-wave-b {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.58;
+  }
+
+  50% {
+    transform: translateX(-1.8%) translateY(-4px);
+    opacity: 0.92;
+  }
+}
+
+@keyframes industrial-chart-wave-c {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.52;
+  }
+
+  50% {
+    transform: translateX(1.2%) translateY(-3px);
+    opacity: 0.86;
+  }
+}
+
+@keyframes industrial-bar-bounce {
+  0%,
+  100% {
+    transform: scaleY(0.88);
+    opacity: 0.66;
+  }
+
+  50% {
+    transform: scaleY(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes industrial-scanline {
+  0% {
+    transform: translateY(-38%);
+    opacity: 0;
+  }
+
+  14% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(38%);
+    opacity: 0;
+  }
+}
+
+@keyframes industrial-pulse-dot {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0 rgba(89, 228, 255, 0.34);
+  }
+
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 12px rgba(89, 228, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(89, 228, 255, 0);
+  }
+}
+
+@keyframes automation-flow-shimmer {
+  0% {
+    stroke-dashoffset: 0;
+    opacity: 0.34;
+  }
+
+  50% {
+    stroke-dashoffset: -52;
+    opacity: 0.62;
+  }
+
+  100% {
+    stroke-dashoffset: -104;
+    opacity: 0.34;
+  }
+}
+
+@keyframes automation-particle-travel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  10% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+
+  82% {
+    opacity: 0.78;
+  }
+
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+    transform: scale(0.78);
+  }
+}
+
+@keyframes automation-pulse-pass {
+  0% {
+    transform: translateX(-32%);
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 0.32;
+  }
+
+  52% {
+    opacity: 0.12;
+  }
+
+  100% {
+    transform: translateX(32%);
+    opacity: 0;
+  }
+}
+
+@keyframes automation-indicator-blink {
+  0%,
+  100% {
+    opacity: 0.32;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 0.88;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes automation-screen-wave-a {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.58;
+  }
+
+  50% {
+    transform: translateX(1.4%) translateY(-3px);
+    opacity: 0.92;
+  }
+}
+
+@keyframes automation-screen-wave-b {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0.42;
+  }
+
+  50% {
+    transform: translateX(-1.2%) translateY(-2px);
+    opacity: 0.72;
+  }
+}
+
+@keyframes automation-plc-breathe {
+  0%,
+  100% {
+    opacity: 0.36;
+    transform: scale(0.92);
+  }
+
+  50% {
+    opacity: 0.84;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes automation-ambient-float {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 2px, 0) scale(0.8);
+  }
+
+  35% {
+    opacity: 0.34;
+  }
+
+  70% {
+    opacity: 0.12;
+    transform: translate3d(6px, -8px, 0) scale(1);
+  }
+}
+
+@keyframes automation-sheen-drift {
+  0%,
+  100% {
+    transform: translateX(-3%);
+    opacity: 0.12;
+  }
+
+  50% {
+    transform: translateX(3%);
+    opacity: 0.28;
+  }
+}
+
+@keyframes factory-image-drift {
+  0%,
+  100% {
+    transform: scale(1.01) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: scale(1.035) translate3d(0, -0.7%, 0);
+  }
+}
+
+@keyframes factory-draft-stage {
+  0%,
+  26% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 0.16;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes factory-frame-stage {
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  36% {
+    opacity: 0.92;
+  }
+
+  60% {
+    opacity: 0.56;
+  }
+
+  100% {
+    opacity: 0.08;
+  }
+}
+
+@keyframes factory-final-stage {
+  0%,
+  38% {
+    opacity: 0.02;
+  }
+
+  62% {
+    opacity: 0.82;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes factory-cad-draw {
+  0%,
+  8% {
+    stroke-dashoffset: var(--factory-stroke, 980);
+    opacity: 0;
+  }
+
+  26% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  42% {
+    stroke-dashoffset: 0;
+    opacity: 0.4;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes factory-cad-marker {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  22% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+
+  38% {
+    opacity: 0.36;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes factory-frame-draw {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: var(--factory-frame-stroke, 920);
+  }
+
+  38% {
+    opacity: 0.86;
+  }
+
+  56% {
+    opacity: 0.92;
+    stroke-dashoffset: 0;
+  }
+
+  74% {
+    opacity: 0.24;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes factory-frame-node {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  48% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+
+  66% {
+    opacity: 0.34;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes factory-final-glow {
+  0%,
+  48% {
+    opacity: 0;
+  }
+
+  72% {
+    opacity: 0.34;
+  }
+
+  100% {
+    opacity: 0.16;
   }
 }
 
@@ -361,6 +1346,36 @@
 
 @media (prefers-reduced-motion: reduce) {
   .logo-gear-spin,
+  .industrial-intelligence-visual,
+  .industrial-intelligence-overlay__metrics span,
+  .industrial-intelligence-overlay__chart i,
+  .industrial-intelligence-overlay__bars span,
+  .industrial-intelligence-overlay__scan,
+  .industrial-intelligence-overlay__pulse,
+  .automation-system-overlay__flow,
+  .automation-system-overlay__particle,
+  .automation-system-overlay__pulse,
+  .automation-system-overlay__screen-indicator,
+  .automation-system-overlay__screen-wave,
+  .automation-system-overlay__plc-light,
+  .automation-system-overlay__ambient,
+  .factory-development-visual__image,
+  .factory-development-visual__draft-stage,
+  .factory-development-visual__frame-stage,
+  .factory-development-visual__final-stage,
+  .factory-development-cad__outline,
+  .factory-development-cad__site,
+  .factory-development-cad__road,
+  .factory-development-cad__gridline,
+  .factory-development-cad__zone,
+  .factory-development-cad__service,
+  .factory-development-cad__marker,
+  .factory-development-frame__beam,
+  .factory-development-frame__column,
+  .factory-development-frame__brace,
+  .factory-development-frame__trace,
+  .factory-development-frame__node,
+  .factory-development-visual__final-sheen,
   .extrusion-visual__ambient,
   .extrusion-visual__barrel-glow,
   .extrusion-visual__barrel-sweep,

@@ -12,7 +12,7 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-industrial-accent">Project Discussion</p>
+          <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-industrial-accent">Get in Touch</p>
           <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-5xl md:text-6xl">
             Build the next production system with engineering that is designed to perform.
           </h2>
@@ -23,7 +23,7 @@ export default function FinalCTA() {
             href="mailto:info@starosta-labs.com"
             className="inline-flex rounded-sm bg-industrial-accent px-10 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-industrial-dark transition-all duration-300 hover:bg-white"
           >
-            Discuss Your Project
+            Talk Through Your Project
           </a>
         </motion.div>
       </div>

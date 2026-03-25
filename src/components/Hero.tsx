@@ -55,7 +55,7 @@ export default function Hero() {
                 href="#contact"
                 className="inline-flex items-center justify-center rounded-sm border border-white/15 px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-white transition-all duration-300 hover:border-industrial-accent/70 hover:text-industrial-accent"
               >
-                Discuss Your Project
+                Talk Through Your Project
               </a>
             </div>
           </div>

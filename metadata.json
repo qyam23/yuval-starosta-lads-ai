@@ -1,6 +1,6 @@
 {
-  "name": "Yuval Starosta Labs",
-  "description": "Senior-level industrial intelligence & engineering lab specializing in advanced extrusion systems, factory engineering, and AI-driven industrial automation.",
+  "name": "AI2 Review Renew",
+  "description": "Renewed AI review website built on the cloned Yuval Starosta Labs project baseline.",
   "requestFramePermissions": [
     "camera",
     "microphone",
