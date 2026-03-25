@@ -1,0 +1,31 @@
+Yuval Starosta Engineering / Yuval Starosta Labs
+
+Purpose
+Yuval Starosta Engineering is an industrial engineering practice focused on practical manufacturing environments. The website describes work around extrusion systems, factory engineering, automation and control systems, industrial automation, and industrial data systems. Yuval Starosta Labs is used for the manufacturing data and industrial intelligence layer.
+
+Operating approach
+The engineering approach is process-first and manufacturing-first. The goal is not visual technology for its own sake, but stable production behavior, understandable control logic, practical implementation, and measurable operational value. AI is treated as a supporting layer where useful, not as a standalone product claim.
+
+ER Labs
+ER Labs is a lightweight industrial intelligence layer for production environments. It connects to available plant data, structures manufacturing data, and supports visibility, anomaly detection, reporting, and decision support on the factory floor. It can work alongside practical dashboard environments, including Power BI where that fits the customer environment, and is intended for industrial operations rather than abstract data science workflows.
+
+Extrusion engineering
+Extrusion engineering includes process engineering, material behavior understanding, co-rotating twin screw extruder logic, line integration, troubleshooting, and scale-up support. The scope covers both new line design and improvement of existing production lines. Typical concerns include dispersion, thermal profile, residence time, venting, throughput stability, and downstream coordination across extrusion systems.
+
+Automation and control systems
+Automation and control systems work includes PLC architecture, HMI structure, alarms, diagnostics, integration, and logic structuring across machines and process stages. The objective is stable, traceable, and understandable process behavior. Control systems are expected to support operators, maintenance, engineering, and future data use in industrial automation environments.
+
+Use cases
+Typical public-facing use cases include:
+- improving visibility in an operating production line
+- stabilizing an extrusion or compounding process on a twin screw extruder line
+- structuring factory layout around process engineering logic
+- modernizing control logic, manufacturing data structure, and plant data readiness
+
+FAQ themes
+Frequently addressed topics include what ER Labs is, whether it replaces MES, whether the work is limited to extrusion, how industrial automation is covered, how manufacturing data is organized, what kinds of factories are supported, how AI is used, what control systems are covered, and what operational value is expected.
+
+Detailed language-specific documentation
+- Hebrew: /docs/he/
+- English: /docs/en/
+- Russian: /docs/ru/
