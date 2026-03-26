@@ -26,6 +26,6 @@ FAQ themes
 Frequently addressed topics include what ER Labs is, whether it replaces MES, whether the work is limited to extrusion, how industrial automation is covered, how manufacturing data is organized, what kinds of factories are supported, how AI is used, what control systems are covered, and what operational value is expected.
 
 Detailed language-specific documentation
-- Hebrew: /docs/he/
-- English: /docs/en/
-- Russian: /docs/ru/
+- Hebrew: ./docs/he/
+- English: ./docs/en/
+- Russian: ./docs/ru/

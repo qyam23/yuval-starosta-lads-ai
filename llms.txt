@@ -3,17 +3,17 @@ Yuval Starosta Engineering / Yuval Starosta Labs
 This repository includes structured documentation intended to help LLM systems understand the entity, capabilities, and industrial scope of the website.
 
 Languages:
-- Hebrew docs: /docs/he/
-- English docs: /docs/en/
-- Russian docs: /docs/ru/
-- Documentation index: /docs/index.md
-- File map: /docs/file-map.md
+- Hebrew docs: ./docs/he/
+- English docs: ./docs/en/
+- Russian docs: ./docs/ru/
+- Documentation index: ./docs/index.md
+- File map: ./docs/file-map.md
 
 Main documentation files:
-- /llms-full.txt
-- /docs/index.md
-- /docs/en/er-labs.md
-- /docs/en/extrusion.md
-- /docs/en/automation.md
-- /docs/en/use-cases.md
-- /docs/en/faq.md
+- ./llms-full.txt
+- ./docs/index.md
+- ./docs/en/er-labs.md
+- ./docs/en/extrusion.md
+- ./docs/en/automation.md
+- ./docs/en/use-cases.md
+- ./docs/en/faq.md

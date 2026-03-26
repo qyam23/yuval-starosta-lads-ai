@@ -2,6 +2,9 @@ node_modules/
 build/
 dist/
 coverage/
+public/docs/
+public/llms.txt
+public/llms-full.txt
 .DS_Store
 *.log
 .env*
