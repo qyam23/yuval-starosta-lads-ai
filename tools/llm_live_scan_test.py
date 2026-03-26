@@ -10,7 +10,7 @@ from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
 
-DEFAULT_BASE_URL = "https://qyam23.github.io/yuval-starosta-lads-ai/"
+DEFAULT_BASE_URL = "https://qyam23.github.io/YUVAL-STAROSTA-ENGINEERING/"
 TIMEOUT_SECONDS = 15
 
 KEYWORDS = [
