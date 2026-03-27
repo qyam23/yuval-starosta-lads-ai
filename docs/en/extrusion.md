@@ -1,7 +1,7 @@
 # Extrusion
 
 ## Scope
-Yuval Starosta Engineering covers extrusion and compounding engineering as a full process engineering domain, not only machine setup.
+Starosta Industrial covers extrusion and compounding engineering as a full process engineering domain, not only machine setup.
 
 ## Practical Capabilities
 - Process design from feeding through stable output

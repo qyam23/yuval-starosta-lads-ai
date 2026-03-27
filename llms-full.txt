@@ -1,7 +1,7 @@
-Yuval Starosta Engineering / Yuval Starosta Labs
+Starosta Industrial / Yuval Starosta Labs
 
 Purpose
-Yuval Starosta Engineering is an industrial engineering practice focused on practical manufacturing environments. The website describes work around extrusion systems, factory engineering, automation and control systems, industrial automation, and industrial data systems. Yuval Starosta Labs is used for the manufacturing data and industrial intelligence layer.
+Starosta Industrial is an industrial engineering practice focused on practical manufacturing environments. The website describes work around extrusion systems, factory engineering, automation and control systems, industrial automation, and industrial data systems. Yuval Starosta Labs is used for the manufacturing data and industrial intelligence layer.
 
 Operating approach
 The engineering approach is process-first and manufacturing-first. The goal is not visual technology for its own sake, but stable production behavior, understandable control logic, practical implementation, and measurable operational value. AI is treated as a supporting layer where useful, not as a standalone product claim.

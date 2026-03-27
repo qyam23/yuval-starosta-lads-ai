@@ -11,7 +11,7 @@ export default function Footer() {
                 <LogoMark className="h-12 w-12" />
               </div>
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white">YUVAL STAROSTA ENGINEERING</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white">STAROSTA INDUSTRIAL</p>
                 <p className="mt-1 text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-slate-500">A Division of Yuval Starosta Labs</p>
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between border-t border-white/8 pt-12 text-xs uppercase tracking-widest text-slate-500 md:flex-row">
-          <p>&copy; 2026 Yuval Starosta Engineering. All rights reserved.</p>
+          <p>&copy; 2026 Starosta Industrial. All rights reserved.</p>
           <div className="mt-6 flex gap-8 md:mt-0">
             <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
             <a href="#" className="transition-colors hover:text-white">Terms of Service</a>

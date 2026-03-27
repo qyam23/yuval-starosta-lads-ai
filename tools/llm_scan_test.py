@@ -22,8 +22,7 @@ KEYWORDS = [
     "control systems",
     "extrusion systems",
     "industrial intelligence",
-    "Yuval Starosta",
-    "Yuval Starosta Engineering",
+    "Starosta Industrial",
     "Yuval Starosta Labs",
     "אקסטרוזיה",
     "בקרה",
@@ -46,8 +45,7 @@ CORE_KEYWORDS = [
     "anomaly detection",
     "control systems",
     "industrial intelligence",
-    "Yuval Starosta",
-    "Yuval Starosta Engineering",
+    "Starosta Industrial",
     "Yuval Starosta Labs",
 ]
 
@@ -172,8 +170,7 @@ def main() -> int:
     core_found = [keyword for keyword in CORE_KEYWORDS if keyword_hits.get(keyword)]
     core_missing = [keyword for keyword in CORE_KEYWORDS if not keyword_hits.get(keyword)]
     brand_keywords = [
-        "Yuval Starosta",
-        "Yuval Starosta Engineering",
+        "Starosta Industrial",
         "Yuval Starosta Labs",
     ]
     brand_ok = all(keyword_hits.get(keyword) for keyword in brand_keywords)

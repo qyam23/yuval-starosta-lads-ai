@@ -15,12 +15,12 @@ export default function Differentiation() {
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-20">
           <div>
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-industrial-accent">Why Yuval Starosta Engineering</p>
+            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.34em] text-industrial-accent">Why Starosta Industrial</p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight tracking-[-0.04em] text-white sm:text-5xl">
               Serious engineering capability for production environments that cannot afford vague thinking.
             </h2>
             <p className="mb-12 mt-6 max-w-2xl text-base leading-8 text-slate-400">
-              Yuval Starosta Engineering combines industrial design discipline with modern control and intelligence layers, giving manufacturing teams one partner that can think from line mechanics through plant systems and live data.
+              Starosta Industrial combines industrial design discipline with modern control and intelligence layers, giving manufacturing teams one partner that can think from line mechanics through plant systems and live data.
             </p>
 
             <div className="space-y-6">

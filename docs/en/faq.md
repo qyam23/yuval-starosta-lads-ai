@@ -9,7 +9,7 @@ No. It is not positioned as a full MES replacement, but it can sit alongside MES
 ## Is this only for extrusion?
 No. Extrusion is a major domain, but the engineering scope also includes industrial automation, factory systems, and industrial data structure.
 
-## What does Yuval Starosta Engineering do?
+## What does Starosta Industrial do?
 It provides industrial engineering focused on extrusion systems, factory engineering, automation and control, and operational data structure.
 
 ## What kind of factories is this for?

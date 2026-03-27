@@ -1,4 +1,4 @@
-Yuval Starosta Engineering / Yuval Starosta Labs
+Starosta Industrial / Yuval Starosta Labs
 
 This repository includes structured documentation intended to help LLM systems understand the entity, capabilities, and industrial scope of the website.
 

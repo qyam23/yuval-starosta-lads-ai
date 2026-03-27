@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { Menu, X, LogIn, LogOut, User as UserIcon } from "lucide-react";
 import { useState } from "react";
 import { useAuth } from "../context/FirebaseContext";
-import LogoMark from "./LogoMark";
+import NavbarBrand from "./NavbarBrand";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,18 +11,11 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/8 bg-[#07101b]/88 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6">
-        <a href="#top" className="flex min-w-0 items-center gap-3">
-          <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white/[0.02]">
-            <LogoMark className="h-14 w-14" />
-          </div>
-          <div className="flex min-w-0 items-center">
-            <span className="truncate text-[0.95rem] font-semibold leading-none tracking-[0.14em] text-white sm:text-base">
-              YUVAL STAROSTA ENGINEERING
-            </span>
-          </div>
+        <a href="#top" className="flex min-w-0 items-center pr-4 lg:pr-6">
+          <NavbarBrand />
         </a>
 
-        <div className="hidden items-center gap-7 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-slate-300 md:flex">
+        <div className="hidden items-center gap-6 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-slate-300 lg:gap-7 md:flex">
           <a href="#domains" className="transition-colors hover:text-industrial-accent">What We Do</a>
           <a href="#intelligence" className="transition-colors hover:text-industrial-accent">ER Labs</a>
           <a href="#expertise" className="transition-colors hover:text-industrial-accent">Expertise</a>

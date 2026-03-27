@@ -37,14 +37,12 @@ KEYWORDS = [
     "ПЛК",
     "завод",
     "инженерия процессов",
-    "Yuval Starosta",
-    "Yuval Starosta Engineering",
+    "Starosta Industrial",
     "Yuval Starosta Labs",
 ]
 
 ENTITY_KEYWORDS = [
-    "Yuval Starosta",
-    "Yuval Starosta Engineering",
+    "Starosta Industrial",
     "Yuval Starosta Labs",
 ]
 

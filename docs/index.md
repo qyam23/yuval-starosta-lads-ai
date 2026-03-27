@@ -1,6 +1,6 @@
 # Documentation Index
 
-This folder contains machine-readable documentation for Yuval Starosta Engineering and Yuval Starosta Labs.
+This folder contains machine-readable documentation for Starosta Industrial and Yuval Starosta Labs.
 
 ## Language folders
 - Hebrew: [he/](./he/)
