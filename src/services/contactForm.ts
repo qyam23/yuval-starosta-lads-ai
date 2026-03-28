@@ -7,7 +7,8 @@ export type ContactFormPayload = {
 };
 
 const CONTACT_EMAIL = "starosta.ing@gmail.com";
-const ENDPOINT = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
+const FORMSUBMIT_TOKEN = "0523cca1d66f8f5aefffd5f3270b1550";
+const ENDPOINT = `https://formsubmit.co/ajax/${FORMSUBMIT_TOKEN}`;
 
 export async function submitContactForm(payload: ContactFormPayload) {
   const formData = new FormData();
