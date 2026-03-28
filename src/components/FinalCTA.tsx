@@ -20,7 +20,7 @@ export default function FinalCTA() {
             From extrusion lines to factory infrastructure, automation architecture, and industrial intelligence, the work stays grounded in real manufacturing constraints.
           </p>
           <a
-            href="mailto:info@starosta-labs.com"
+            href="mailto:starosta.ing@gmail.com"
             className="inline-flex rounded-sm bg-industrial-accent px-10 py-4 text-sm font-semibold uppercase tracking-[0.24em] text-industrial-dark transition-all duration-300 hover:bg-white"
           >
             Talk Through Your Project

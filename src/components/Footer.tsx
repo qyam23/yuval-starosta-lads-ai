@@ -33,7 +33,11 @@ export default function Footer() {
           <div>
             <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Contact</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li>info@starosta-labs.com</li>
+              <li>
+                <a href="mailto:starosta.ing@gmail.com" className="transition-colors hover:text-industrial-accent">
+                  starosta.ing@gmail.com
+                </a>
+              </li>
               <li>Executive Engineering Office</li>
               <li>Tel Aviv, Israel</li>
             </ul>
