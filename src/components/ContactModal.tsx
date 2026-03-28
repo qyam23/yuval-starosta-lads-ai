@@ -132,7 +132,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-[#02060d]/74 px-4 py-8 backdrop-blur-sm"
+          className="fixed inset-0 z-[80] flex items-center justify-center overflow-y-auto bg-[#02060d]/74 px-4 py-6 backdrop-blur-sm sm:py-8"
           onClick={onClose}
         >
           <motion.div
@@ -140,12 +140,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 18, scale: 0.98 }}
             transition={{ duration: 0.28, ease: "easeOut" }}
-            className="relative w-full max-w-2xl overflow-hidden rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,17,29,0.96),rgba(6,10,18,0.98))] shadow-[0_28px_80px_rgba(0,0,0,0.42)]"
+            className="relative my-auto w-full max-w-2xl overflow-hidden rounded-[1.7rem] border border-white/10 bg-[linear-gradient(180deg,rgba(10,17,29,0.96),rgba(6,10,18,0.98))] shadow-[0_28px_80px_rgba(0,0,0,0.42)] sm:max-h-[calc(100vh-4rem)]"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-industrial-accent/60 to-transparent" />
 
-            <div className="flex items-start justify-between gap-6 border-b border-white/8 px-6 pb-5 pt-6 sm:px-8">
+            <div className="flex items-start justify-between gap-6 border-b border-white/8 px-5 pb-5 pt-5 sm:px-8 sm:pt-6">
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-industrial-accent">Contact us</p>
                 <h2 className="mt-3 text-2xl font-semibold tracking-[-0.03em] text-white sm:text-[2rem]">
@@ -162,7 +162,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="px-6 pb-7 pt-6 sm:px-8">
+            <form onSubmit={handleSubmit} className="max-h-[calc(100vh-12rem)] overflow-y-auto px-5 pb-5 pt-5 sm:max-h-[calc(100vh-15rem)] sm:px-8 sm:pb-7 sm:pt-6">
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field
                   label="First name"
@@ -220,14 +220,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
               )}
 
-              <div className="mt-6 flex flex-col items-start justify-between gap-4 border-t border-white/8 pt-5 sm:flex-row sm:items-center">
+              <div className="sticky bottom-0 mt-6 flex flex-col items-start justify-between gap-4 border-t border-white/8 bg-[linear-gradient(180deg,rgba(10,17,29,0.88),rgba(6,10,18,0.98))] pb-1 pt-5 sm:flex-row sm:items-center">
                 <p className="text-sm leading-6 text-slate-400">
                   Website source will be sent automatically as <span className="text-slate-200">starostaindustrial.com</span>.
                 </p>
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex min-w-[11rem] items-center justify-center rounded-sm bg-industrial-accent px-8 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-industrial-dark transition-all duration-300 hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex w-full min-w-[11rem] items-center justify-center rounded-sm bg-industrial-accent px-8 py-3 text-sm font-semibold uppercase tracking-[0.22em] text-industrial-dark transition-all duration-300 hover:bg-white disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
                 >
                   {status === "submitting" ? "Sending..." : "Send"}
                 </button>

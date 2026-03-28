@@ -106,7 +106,7 @@ function SharePanel() {
       >
         <span className="footer-share-trigger__pulse" aria-hidden="true" />
         <span className="flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-industrial-accent">
-          asher
+          sher
           <Share2 size={14} className="footer-share-trigger__icon" />
         </span>
         <span className="max-w-[13rem] text-[1.05rem] font-semibold uppercase tracking-[0.12em] text-white sm:text-[1.15rem]">
