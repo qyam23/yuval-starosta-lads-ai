@@ -5,22 +5,27 @@ import NavbarBrand from "./NavbarBrand";
 
 type NavbarProps = {
   onContactClick: () => void;
+  isPolicyPage?: boolean;
 };
 
-export default function Navbar({ onContactClick }: NavbarProps) {
+export default function Navbar({ onContactClick, isPolicyPage = false }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const homeHref = isPolicyPage ? "/" : "#top";
+  const domainsHref = isPolicyPage ? "/#domains" : "#domains";
+  const intelligenceHref = isPolicyPage ? "/#intelligence" : "#intelligence";
+  const expertiseHref = isPolicyPage ? "/#expertise" : "#expertise";
 
   return (
     <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/8 bg-[#07101b]/88 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6">
-        <a href="#top" className="flex min-w-0 items-center pr-4 lg:pr-6">
+        <a href={homeHref} className="flex min-w-0 items-center pr-4 lg:pr-6">
           <NavbarBrand />
         </a>
 
         <div className="hidden items-center gap-6 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-slate-300 lg:gap-7 md:flex">
-          <a href="#domains" className="transition-colors hover:text-industrial-accent">What We Do</a>
-          <a href="#intelligence" className="transition-colors hover:text-industrial-accent">ER Labs</a>
-          <a href="#expertise" className="transition-colors hover:text-industrial-accent">Expertise</a>
+          <a href={domainsHref} className="transition-colors hover:text-industrial-accent">What We Do</a>
+          <a href={intelligenceHref} className="transition-colors hover:text-industrial-accent">ER Labs</a>
+          <a href={expertiseHref} className="transition-colors hover:text-industrial-accent">Expertise</a>
 
           <div className="ml-3 flex items-center gap-3 border-l border-white/10 pl-5">
             <HeaderShareButton />
@@ -50,9 +55,9 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           className="border-b border-white/8 bg-[#07101b]/98 px-6 py-6 md:hidden"
         >
           <div className="flex flex-col gap-5 text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">
-            <a href="#domains" onClick={() => setIsOpen(false)}>What We Do</a>
-            <a href="#intelligence" onClick={() => setIsOpen(false)}>ER Labs</a>
-            <a href="#expertise" onClick={() => setIsOpen(false)}>Expertise</a>
+            <a href={domainsHref} onClick={() => setIsOpen(false)}>What We Do</a>
+            <a href={intelligenceHref} onClick={() => setIsOpen(false)}>ER Labs</a>
+            <a href={expertiseHref} onClick={() => setIsOpen(false)}>Expertise</a>
           </div>
 
           <div className="mt-6 flex flex-col gap-6 border-t border-white/10 pt-6">

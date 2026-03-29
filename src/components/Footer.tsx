@@ -2,7 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { Copy, ExternalLink, Linkedin, Mail, MessageCircle, Share2 } from "lucide-react";
 import NavbarBrand from "./NavbarBrand";
 
-export default function Footer() {
+type FooterProps = {
+  isPolicyPage?: boolean;
+};
+
+export default function Footer({ isPolicyPage = false }: FooterProps) {
+  const extrusionHref = isPolicyPage ? "/#extrusion" : "#extrusion";
+  const factoryHref = isPolicyPage ? "/#factory" : "#factory";
+  const automationHref = isPolicyPage ? "/#automation" : "#automation";
+  const intelligenceHref = isPolicyPage ? "/#intelligence" : "#intelligence";
+
   return (
     <footer className="border-t border-white/8 bg-[#050a12] px-6 py-[4.5rem]">
       <div className="mx-auto max-w-7xl">
@@ -20,10 +29,10 @@ export default function Footer() {
           <div>
             <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">What We Do</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><a href="#extrusion" className="transition-colors hover:text-industrial-accent">Extrusion Engineering</a></li>
-              <li><a href="#factory" className="transition-colors hover:text-industrial-accent">Factory Building</a></li>
-              <li><a href="#automation" className="transition-colors hover:text-industrial-accent">Automation &amp; Control</a></li>
-              <li><a href="#intelligence" className="transition-colors hover:text-industrial-accent">ER Labs</a></li>
+              <li><a href={extrusionHref} className="transition-colors hover:text-industrial-accent">Extrusion Engineering</a></li>
+              <li><a href={factoryHref} className="transition-colors hover:text-industrial-accent">Factory Building</a></li>
+              <li><a href={automationHref} className="transition-colors hover:text-industrial-accent">Automation &amp; Control</a></li>
+              <li><a href={intelligenceHref} className="transition-colors hover:text-industrial-accent">ER Labs</a></li>
             </ul>
           </div>
 
@@ -44,7 +53,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between border-t border-white/8 pt-12 text-xs uppercase tracking-widest text-slate-500 md:flex-row">
           <p>&copy; 2026 Starosta Industrial. All rights reserved.</p>
           <div className="mt-6 flex gap-8 md:mt-0">
-            <a href="#" className="transition-colors hover:text-white">Privacy Policy</a>
+            <a href="/privacy-policy.html" className="transition-colors hover:text-white">Privacy Policy</a>
             <a href="#" className="transition-colors hover:text-white">Terms of Service</a>
           </div>
         </div>
