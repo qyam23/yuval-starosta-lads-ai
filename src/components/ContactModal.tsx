@@ -220,6 +220,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
               )}
 
+              <p className="mt-5 text-sm leading-6 text-slate-400">
+                The information you submit through the contact form or send to the email address published on this website will be used to respond to your inquiry, contact you regarding your request, and maintain a reasonable business record of the communication. Providing the information is voluntary, but without the relevant details we may not be able to respond. For more information, please review our{" "}
+                <a href="/privacy-policy.html" className="text-slate-200 underline decoration-white/20 underline-offset-4 transition-colors hover:text-industrial-accent">
+                  Privacy Policy
+                </a>
+                .
+              </p>
+
               <div className="sticky bottom-0 mt-6 flex flex-col items-start justify-between gap-4 border-t border-white/8 bg-[linear-gradient(180deg,rgba(10,17,29,0.88),rgba(6,10,18,0.98))] pb-1 pt-5 sm:flex-row sm:items-center">
                 <p className="text-sm leading-6 text-slate-400">
                   Website source will be sent automatically as <span className="text-slate-200">starostaindustrial.com</span>.
