@@ -57,6 +57,10 @@ export default function Footer({ isPolicyPage = false }: FooterProps) {
             <a href="#" className="transition-colors hover:text-white">Terms of Service</a>
           </div>
         </div>
+        <div className="sr-only">
+          <a href="/llms.txt">Machine-readable index</a>
+          <a href="/docs/starosta-industrial.md">Starosta Industrial machine-readable profile</a>
+        </div>
       </div>
     </footer>
   );

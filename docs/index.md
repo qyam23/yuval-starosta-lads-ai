@@ -2,6 +2,9 @@
 
 This folder contains machine-readable documentation for Starosta Industrial and Yuval Starosta Labs.
 
+## Canonical business profile
+- [Starosta Industrial](./starosta-industrial.md)
+
 ## Language folders
 - Hebrew: [he/](./he/)
 - English: [en/](./en/)

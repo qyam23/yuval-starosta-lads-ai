@@ -10,7 +10,7 @@ from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 
 
-DEFAULT_BASE_URL = "https://qyam23.github.io/YUVAL-STAROSTA-ENGINEERING/"
+DEFAULT_BASE_URL = "https://starostaindustrial.com/"
 TIMEOUT_SECONDS = 15
 
 KEYWORDS = [
@@ -115,6 +115,7 @@ def build_targets(base_url: str) -> list[tuple[str, str]]:
         ("llms-full.txt", urljoin(normalized, "llms-full.txt")),
         ("llm.html", urljoin(normalized, "llm.html")),
         ("docs/index.md", urljoin(normalized, "docs/index.md")),
+        ("docs/starosta-industrial.md", urljoin(normalized, "docs/starosta-industrial.md")),
         ("docs/file-map.md", urljoin(normalized, "docs/file-map.md")),
     ]
 
@@ -222,7 +223,7 @@ def main() -> int:
     hebrew_found = [keyword for keyword in HEBREW_KEYWORDS if total_hits.get(keyword, 0) > 0]
     russian_found = [keyword for keyword in RUSSIAN_KEYWORDS if total_hits.get(keyword, 0) > 0]
     docs_reachable = all(
-        label in fetched for label in ("llms.txt", "llms-full.txt", "llm.html", "docs/index.md", "docs/file-map.md")
+        label in fetched for label in ("llms.txt", "llms-full.txt", "llm.html", "docs/index.md", "docs/starosta-industrial.md", "docs/file-map.md")
     )
 
     passed = (

@@ -3,6 +3,7 @@
 ## Root files
 - [`../llms.txt`](../llms.txt): short machine-readable index for LLM systems
 - [`../llms-full.txt`](../llms-full.txt): longer unified summary of the business, capabilities, and use cases
+- [`./starosta-industrial.md`](./starosta-industrial.md): canonical machine-readable business profile for Starosta Industrial
 - [`./index.md`](./index.md): navigation index for the documentation folders
 - [`../tools/llm_scan_test.py`](../tools/llm_scan_test.py): local keyword scan for docs and main site files
 - [`../run_llm_docs_test.bat`](../run_llm_docs_test.bat): local runner for the docs scan

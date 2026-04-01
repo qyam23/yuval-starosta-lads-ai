@@ -79,6 +79,10 @@ def gather_files() -> list[Path]:
         if (ROOT / fixed).exists():
             files.append(ROOT / fixed)
 
+    profile_doc = ROOT / "docs" / "starosta-industrial.md"
+    if profile_doc.exists():
+        files.append(profile_doc)
+
     docs_root = ROOT / "docs"
     if docs_root.exists():
         files.extend(sorted(p for p in docs_root.rglob("*") if p.is_file()))
