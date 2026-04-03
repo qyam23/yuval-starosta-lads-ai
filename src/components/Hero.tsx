@@ -63,6 +63,18 @@ export default function Hero({ onContactClick }: HeroProps) {
                 Contact us
               </button>
             </div>
+
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-slate-400">
+              <a href="/llms.txt" className="transition-colors hover:text-industrial-accent">
+                llms.txt
+              </a>
+              <a href="/docs/starosta-industrial.md" className="transition-colors hover:text-industrial-accent">
+                Machine-readable profile
+              </a>
+              <a href="/privacy-policy.html" className="transition-colors hover:text-industrial-accent">
+                Privacy policy
+              </a>
+            </div>
           </div>
 
           <div className="relative lg:self-center">

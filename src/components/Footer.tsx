@@ -48,6 +48,15 @@ export default function Footer({ isPolicyPage = false }: FooterProps) {
               <li>Tel Aviv, Israel</li>
             </ul>
           </div>
+
+          <div>
+            <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Reference Files</h4>
+            <ul className="space-y-4 text-sm text-slate-400">
+              <li><a href="/llms.txt" className="transition-colors hover:text-industrial-accent">llms.txt</a></li>
+              <li><a href="/docs/index.md" className="transition-colors hover:text-industrial-accent">Documentation index</a></li>
+              <li><a href="/docs/starosta-industrial.md" className="transition-colors hover:text-industrial-accent">Starosta Industrial profile</a></li>
+            </ul>
+          </div>
         </div>
 
         <div className="flex flex-col items-center justify-between border-t border-white/8 pt-12 text-xs uppercase tracking-widest text-slate-500 md:flex-row">

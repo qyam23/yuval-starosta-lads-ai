@@ -19,6 +19,17 @@ export default function PrivacyPolicyPage() {
             <br />
             We respect the privacy of visitors to our website and handle personal information in accordance with applicable Israeli law.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-slate-400">
+            <a href="/" className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:border-industrial-accent/60 hover:text-industrial-accent">
+              Homepage
+            </a>
+            <a href="/docs/starosta-industrial.md" className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:border-industrial-accent/60 hover:text-industrial-accent">
+              Machine-readable profile
+            </a>
+            <a href="/llms.txt" className="rounded-full border border-white/10 px-4 py-2 transition-colors hover:border-industrial-accent/60 hover:text-industrial-accent">
+              llms.txt
+            </a>
+          </div>
         </div>
 
         <div className="space-y-10 px-6 py-8 sm:px-10 sm:py-10">
