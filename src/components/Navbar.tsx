@@ -135,7 +135,7 @@ function HeaderShareButton({ mobile = false }: HeaderShareButtonProps) {
         type="button"
         onClick={() => setIsOpen((open) => !open)}
         data-analytics="cta_click"
-        data-analytics-label="Sher"
+        data-analytics-label="Share"
         data-analytics-section-name="header_share"
         className={
           mobile
@@ -146,7 +146,7 @@ function HeaderShareButton({ mobile = false }: HeaderShareButtonProps) {
         aria-label="Share Starosta Industrial"
       >
         <Share2 size={mobile ? 16 : 14} className="header-share-button__icon" />
-        <span>sher</span>
+        <span>SHARE</span>
       </button>
 
       {isOpen && (

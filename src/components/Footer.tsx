@@ -55,11 +55,11 @@ export default function Footer({ isPolicyPage = false }: FooterProps) {
           </div>
 
           <div>
-            <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Reference Files</h4>
+            <h4 className="mb-6 text-sm font-bold uppercase tracking-widest text-white">Resources</h4>
             <ul className="space-y-4 text-sm text-slate-400">
-              <li><a href="/llms.txt" className="transition-colors hover:text-industrial-accent" data-analytics="footer-link" data-analytics-section-name="reference_files">llms.txt</a></li>
-              <li><a href="/docs/index.md" className="transition-colors hover:text-industrial-accent" data-analytics="footer-link" data-analytics-section-name="reference_files">Documentation index</a></li>
-              <li><a href="/docs/starosta-industrial.md" className="transition-colors hover:text-industrial-accent" data-analytics="footer-link" data-analytics-section-name="reference_files">Starosta Industrial profile</a></li>
+              <li><a href="/llms.txt" className="transition-colors hover:text-industrial-accent" data-analytics="footer-link" data-analytics-section-name="reference_files">AI Access</a></li>
+              <li><a href="/docs/index.md" className="transition-colors hover:text-industrial-accent" data-analytics="footer-link" data-analytics-section-name="reference_files">Documentation</a></li>
+              <li><a href="/docs/starosta-industrial.md" className="transition-colors hover:text-industrial-accent" data-analytics="footer-link" data-analytics-section-name="reference_files">Company Profile</a></li>
             </ul>
           </div>
         </div>
@@ -128,7 +128,7 @@ function SharePanel() {
         type="button"
         onClick={() => setIsOpen((open) => !open)}
         data-analytics="cta_click"
-        data-analytics-label="Sher"
+        data-analytics-label="Share"
         data-analytics-section-name="footer_share"
         className="footer-share-trigger group relative flex min-h-[11.5rem] w-full flex-col items-start justify-between overflow-hidden rounded-[1.25rem] border border-industrial-accent/28 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.015))] p-5 text-left transition-all duration-300 hover:border-industrial-accent/60 hover:bg-[linear-gradient(180deg,rgba(212,175,55,0.08),rgba(255,255,255,0.03))]"
         aria-expanded={isOpen}
@@ -136,7 +136,7 @@ function SharePanel() {
       >
         <span className="footer-share-trigger__pulse" aria-hidden="true" />
         <span className="flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-industrial-accent">
-          sher
+          SHARE
           <Share2 size={14} className="footer-share-trigger__icon" />
         </span>
         <span className="max-w-[13rem] text-[1.05rem] font-semibold uppercase tracking-[0.12em] text-white sm:text-[1.15rem]">

@@ -1614,4 +1614,17 @@
   .footer-share-trigger__pulse {
     animation: none;
   }
+
+  .factory-development-visual__draft-stage,
+  .factory-development-visual__frame-stage {
+    opacity: 0;
+  }
+
+  .factory-development-visual__final-stage {
+    opacity: 1;
+  }
+
+  .factory-development-visual__final-sheen {
+    opacity: 0.16;
+  }
 }
