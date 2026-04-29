@@ -18,6 +18,11 @@ Core machine-readable files:
 - ./docs/index.md
 - ./docs/file-map.md
 
+Public signals and campaign:
+- ./docs/public-signals.md
+- ./docs/social/starosta-industrial-launch-campaign.md
+- ./docs/market-position/factory-engineering-israel-us-europe.md
+
 Language folders:
 - Hebrew docs: ./docs/he/
 - English docs: ./docs/en/

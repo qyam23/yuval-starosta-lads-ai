@@ -20,6 +20,11 @@ This folder contains machine-readable documentation for Starosta Industrial and 
 - [Industrial Intelligence](./industrial-intelligence.md)
 - [ER Labs](./er-labs.md)
 
+## Public Signals and Launch Campaign
+- [Public Signals](./public-signals.md)
+- [Starosta Industrial Launch Campaign](./social/starosta-industrial-launch-campaign.md)
+- [Factory Engineering Market Position](./market-position/factory-engineering-israel-us-europe.md)
+
 ## Language folders
 - Hebrew: [he/](./he/)
 - English: [en/](./en/)
